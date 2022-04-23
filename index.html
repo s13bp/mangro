@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" media="screen and (max-width: 480px) and (orientation:portrait)" href="css/mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Share+Tech&display=swap" rel="stylesheet">
+    <title>MANGRO</title>
+    <style>
+
+        .w3-third {
+          
+          position: relative;
+          display: inline-block;
+          height: 100%;              
+        }
+    </style>
+  <style>
+  * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+}
+ body {
+	 transition: background 0.7s ease-in-out;
+}
+ .section {
+	
+	 
+	
+	 height: 120vh;
+	 color: #fff;
+	 
+	 
+}
+ .section[data-bg="yellow"] {
+	 color: #333;
+}
+ 
+
+  </style>  
+  <style>
+        body , h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 100;
+        }
+    </style>
+    <style>
+        p {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+        }
+    
+    </style>
+    
+      
+</head>
+<body>
+
+
+    <div class="section" data-bg="black" style="min-height: 110vh;">
+      <div class="w3-container" >
+         <div class="w3-content">
+             <div class="w3-half">
+                
+               
+                 <h2 style="margin-top: 15vh; letter-spacing: 0.5rem;" >
+                    <b  class="w3-jumbo"> MANGRO</b> 
+                  </h2> <br><br>
+                  <h2 class="w3-xlarge"></h2> <br><br><br><br>
+                
+                        
+                </div>
+            </div>
+        </div>
+        
+              
+            
+            
+                <div class="w3-container" style="border: 1px solid rgba(0, 0, 0, 0); z-index: 9; max-width: 49vw; margin-left: 50vw;margin-top: -30VH;">
+							   
+                    <model-viewer auto-rotate camera-controls ar style="height: 70vh; width: 100%; z-index: 6;" src="images/untitleed.glb" >
+    
+                    </model-viewer>
+    
+                </div>
+        
+      </div>
+    </div>
+    <div class="section" data-bg="white">
+        <div class="w3-container">
+            <div class="w3-content">
+                <h2><br><br>
+                    <b style="margin-left:6vw ;"  class="w3-xxxlarge w3-center w3-text-black">BUY A TOKEN TO PLANT A TREE ! </b> 
+                </h2><br> <br>
+                  <p class="w3-xlarge w3-center w3-text-black" >
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, tempore veritatis quae assumenda nesciunt reprehenderit quia! Omnis dolore aspernatur exercitationem temporibus officiis numquam reprehenderit cumque in, placeat eum libero totam architecto, a quod, porro voluptas laboriosam aperiam eaque repudiandae explicabo molestias. Sapiente officia necessitatibus asperiores ea, dolore in soluta nam, accusamus obcaecati quia perferendis dicta. Velit vitae dolore omnis repellendus molestias repudiandae labore minima at exercitationem voluptate eaque dignissimos inventore, ipsa excepturi facere odit temporibus voluptates quos ad voluptatibus est suscipit iure optio quasi? Doloribus id vel omnis laboriosam! Corrupti repellat eaque quos nostrum eum amet at, dolorum et officiis!
+                  </p> <br><br><br>
+                    
+
+
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        AOS.init();
+    </script> 
+<script>
+    window.sections = [...document.querySelectorAll('.section')];
+    window.lastScrollTop = window.pageYOffset;
+
+    document.body.style.background = window.sections[0].getAttribute('data-bg');
+
+    window.addEventListener('scroll', onScroll);
+
+    function onScroll() {
+    const scrollTop = window.pageYOffset;
+    
+    const section = window.sections
+        .map(section => {
+        const el = section;
+        const rect = el.getBoundingClientRect();
+        return {el, rect};
+        })
+        .find(section => section.rect.bottom >= (window.innerHeight * 0.5));
+    document.body.style.background = section.el.getAttribute('data-bg');
+    }
+
+
+</script> 
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</body>
+</html>
